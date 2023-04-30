@@ -1,4 +1,3 @@
-package Subsel;
 public class Subsel {
 
     public static int[] takeEvery(int[] a, int stride, int beginWith) {

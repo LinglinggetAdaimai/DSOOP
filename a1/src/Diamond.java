@@ -1,7 +1,5 @@
-package Diamond;
-
-
 public class Diamond {
+    
         public static void printDiamond(int k){
 
         int h = k + 1;

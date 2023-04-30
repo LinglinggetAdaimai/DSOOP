@@ -1,4 +1,3 @@
-package Hidden;
 public class Hidden {
     public static boolean isHidden(String s, String t) {
         // given s find t in s

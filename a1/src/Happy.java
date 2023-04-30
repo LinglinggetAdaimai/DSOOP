@@ -1,5 +1,3 @@
-package Happy;
-// 23:25
 public class Happy {
     
 
