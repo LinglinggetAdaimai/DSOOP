@@ -80,6 +80,9 @@ public class SLList {
     public void removeFirst() {
         // remove the first one from the list
         // please take care of the size too
+        if (sen.next == null) {
+            return;
+        }
         sen.next = sen.next.next;
         size--;
     }
