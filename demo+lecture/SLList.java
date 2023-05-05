@@ -88,16 +88,29 @@ public class SLList {
     }
 
     public void insert(int newValue, int k) {
-        IntNode curr = sen.next;
-        if (k==0) {
+        
+        // if k is at the start
+        if (k == 0) {
             this.addFirst(newValue);
+            return;
+        }
+        
+        // if k is more than the size of this list
+        if (k > (size-1)) {
+            this.addLast(newValue);
+            return;
+        }
+        
+        // else
+        IntNode curr = sen.next;
         int index = 0;
-        while (index != (k-1) && curr.next != null) {
+        while (index != (k-1)) {
             curr = curr.next;
             index++;
         }
         curr.next = new IntNode(newValue, curr.next);
         size++;
     }
+
 }
 
