@@ -89,9 +89,12 @@ public class SLList {
 
     public void insert(int newValue, int k) {
         IntNode curr = sen.next;
+        if (k==0) {
+            this.addFirst(newValue);
         int index = 0;
-        while (index != (k-1)) {
+        while (index != (k-1) && curr.next != null) {
             curr = curr.next;
+            index++;
         }
         curr.next = new IntNode(newValue, curr.next);
         size++;
