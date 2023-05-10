@@ -24,7 +24,8 @@ public class DanceCompetition {
     // DanceCompetition's constructor that allows for customizing the weights
     // of popping dance and hip-hop dance.
     public DanceCompetition(double poppingDance, double hipHop) {
-        //CODE HERE
+        this.poppingDanceFraction = poppingDance;
+        this.hiphopFraction = hipHop;
     }
     
     // DanceCompetition's constructor that will set the default weights to
@@ -32,15 +33,14 @@ public class DanceCompetition {
     // (Hint: Use this(...) to call the other constructor instead of rewriting the
     // same logic)
     public DanceCompetition() {
-        //CODE HERE
-        //HINT: this(0.7, 0.3);
+        this(0.7, 0.3);
     }
 
     // Return a list of competitors whose total dance score (as given by
     // getTotalDanceScore) is at least 8.0
     public List<Competitor> getGoldMedal(){
         //CODE HERE
-        return null; // TODO: Change me
+        return ; 
     }
     
     // Return the weight (i.e., fraction) of hip-hop dance

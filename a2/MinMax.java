@@ -6,7 +6,8 @@ class Box {
 }
 
 public class MinMax {
-    /* Logic: helper that is a recursive function that takes in an array
+    /* Logic: helper that is a recursive function that takes in an array and break it down,
+    until it has only 2 element and give back a box [min, max] and then compare with the other half and return min, max again
         MaxnMin (int [] array) and returns [min, max] 
 
         There are 4 cases in this function

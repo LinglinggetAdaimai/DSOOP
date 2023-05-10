@@ -1,4 +1,4 @@
-import java.util.*; 
+import java.util.*;
 
 /**
  * Put your name and student id here
@@ -13,9 +13,11 @@ import java.util.*;
  */
 public class ScoreKeeper {
    // TODO: Declare private member variables as needed
+   double[] scores;
 
    public ScoreKeeper() {
       // TODO: Create an instance for this.scores
+      this.scores = null;
    }
    
    /*
@@ -23,14 +25,17 @@ public class ScoreKeeper {
     * scores. If the member variable already has existing data, clear it before
     * putting in the new scores.
     */
-   public void setScores(double[] scores) {
-      // TODO: Write me
+   public void setScores(double[] scores) { // TODO: Write me
+      
+      // malloc by the size and put the number in
+      this.scores = new double[scores.length]; 
+      this.scores = scores;
+
    }
    
    // Return an array double[] of scores as was previously set
-   public double[] getScores() {
-      // TODO: Write me
-      return null; // TODO: REMOVE ME
+   public double[] getScores() { // TODO: Write me
+      return scores;
    }
   
    /*
@@ -40,9 +45,22 @@ public class ScoreKeeper {
     * n is the length of the score list. This function will return Double.NaN if 
     * n is <= 2 because no meaningful average can be computed.
     */
-   public double getCalibratedAverage() {
-      // TODO: Write me
-      return 0.0; // TODO: REMOVE ME
+   public double getCalibratedAverage() { // TODO: Write me
+
+      // if less than 2 elements then we return null
+         // if not then return the sum of the avg of the scores w/o max,min
+
+      if (this.scores.length <= 2) {
+         return Double.NaN;
+      }
+      else {
+         double[] array = this.scores;
+         int n = array.length;
+         Arrays.sort(array);
+         double sum = (Arrays.stream(array).sum()) - array[0] - array[n-1];
+         return sum/n;
+      }
+      
    }
    
    public static void main(String[] args) {
