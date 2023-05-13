@@ -25,30 +25,31 @@ public class Competitor {
 
     // Competitor's constructor
     public Competitor() {
-        //CODE HERE
+        this.aliasName = null;
+        this.poppingDanceScores = new ScoreKeeper();
+        this.hipHopDanceScores = new ScoreKeeper();
     }
 
     // Set the alias name of the competitor
     public void setAlias(String name) {
-        //CODE HERE
+        this.aliasName = name;
     }
 
     // Return the alias name of the competitor
     public String getAlias() {
-        //CODE HERE
-        return null; // TODO: Change me
+        return this.aliasName; 
     }
     
     // Record into the member variable poppingDanceScores a list of scores from the
     // judges (given as an array).
     public void setPoppingDanceScore(double[] scores) {
-       //CODE HERE 
+       this.poppingDanceScores.setScores(scores);
     }
     
     // Record into the member variable hipHopDanceScores a list of scores from the
     // judges (given as an array).
     public void setHipHopDanceScore(double[] scores) {
-        //CODE HERE
+        this.hipHopDanceScores.setScores(scores);
     }
 
     // Set the competition to the given DanceCompetition object
@@ -59,27 +60,26 @@ public class Competitor {
     // Print all recorded popping dance scores. The format is
     // [10.0, 9.0, 9.0, 9.0, 9.5, 9.5].
     public void printPoppingDanceScore() {
-        //CODE HERE
+        System.out.println(Arrays.toString(this.poppingDanceScores.getScores()));
     }
-
+    
     // Print all recorded hip-hop dance scores. The format is
     // [10.0, 9.0, 9.0, 9.0, 9.5, 9.5].
     public void printHipHopDanceScore() {
-        //CODE HERE
+        System.out.println(Arrays.toString(this.hipHopDanceScores.getScores()));
     }
 
     // Return the average popping-dance score after excluding the minimum and
     // maximum. (Hint: Conveniently, the ScoreKeeper class has a matching method.)
     public double getPoppingDanceAverage() { 
-        //CODE HERE
-        return 0.0; // TODO: CHANGE ME
+        return this.poppingDanceScores.getCalibratedAverage();
     }
 
     // Return the average hip-hop score after excluding the minimum and
     // maximum. (Hint: Conveniently, the ScoreKeeper class has a matching method.)
     public double getHipHopDanceAverage() {
         //CODE HERE
-        return 0.0; // TODO: CHANGE ME
+        return this.hipHopDanceScores.getCalibratedAverage();
     }
 
     // Return the weighted average of the dance scores. The weights are specified
@@ -92,8 +92,20 @@ public class Competitor {
     // Remember that the calibrated average of a dance is the average computed after
     // excluding the min and the max.
     public double getTotalDanceScore() {
-        //CODE HERE
-        return 0.0; // TODO: CHANGE ME
+
+        double p;
+        double h;
+
+        if (competition == null) {
+            p = 0.6;
+            h = 0.4;
+        }
+        else {
+            p = competition.getPoppingDanceFraction();
+            h = competition.getHipHopFraction();
+        }
+
+        return (p * this.getPoppingDanceAverage()) + (h * this.getHipHopDanceAverage());
     }
 
 
