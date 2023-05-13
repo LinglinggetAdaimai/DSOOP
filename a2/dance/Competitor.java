@@ -27,7 +27,7 @@ public class Competitor {
     public Competitor() {
         this.aliasName = null;
         this.poppingDanceScores = new ScoreKeeper();
-        this.hipHopDanceScores =new ScoreKeeper();
+        this.hipHopDanceScores = new ScoreKeeper();
     }
 
     // Set the alias name of the competitor
@@ -92,10 +92,20 @@ public class Competitor {
     // Remember that the calibrated average of a dance is the average computed after
     // excluding the min and the max.
     public double getTotalDanceScore() {
+
+        double p;
+        double h;
+
         if (competition == null) {
-            DanceCompetition(0.6, 0.4);
+            p = 0.6;
+            h = 0.4;
         }
-        return 0.0; // TODO: CHANGE ME
+        else {
+            p = competition.getPoppingDanceFraction();
+            h = competition.getHipHopFraction();
+        }
+
+        return (p * this.getPoppingDanceAverage()) + (h * this.getHipHopDanceAverage());
     }
 
 

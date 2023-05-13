@@ -12,11 +12,11 @@ import java.util.*;
  * score storage.
  */
 public class ScoreKeeper {
-   // TODO: Declare private member variables as needed
+   // Declare private member variables as needed
    double[] scores;
 
    public ScoreKeeper() {
-      // TODO: Create an instance for this.scores
+      // Create an instance for this.scores
       this.scores = null;
    }
    
@@ -25,7 +25,7 @@ public class ScoreKeeper {
     * scores. If the member variable already has existing data, clear it before
     * putting in the new scores.
     */
-   public void setScores(double[] scores) { // TODO: Write me
+   public void setScores(double[] scores) { 
       
       // malloc by the size and put the number in
       this.scores = new double[scores.length]; 
@@ -34,7 +34,7 @@ public class ScoreKeeper {
    }
    
    // Return an array double[] of scores as was previously set
-   public double[] getScores() { // TODO: Write me
+   public double[] getScores() { 
       return scores;
    }
   
@@ -45,7 +45,7 @@ public class ScoreKeeper {
     * n is the length of the score list. This function will return Double.NaN if 
     * n is <= 2 because no meaningful average can be computed.
     */
-   public double getCalibratedAverage() { // TODO: Write me
+   public double getCalibratedAverage() {
 
       // if less than 2 elements then we return null
          // if not then return the sum of the avg of the scores w/o max,min
@@ -58,7 +58,7 @@ public class ScoreKeeper {
          int n = array.length;
          Arrays.sort(array);
          double sum = (Arrays.stream(array).sum()) - array[0] - array[n-1];
-         return sum/n;
+         return sum/(n-2);
       }
       
    }
