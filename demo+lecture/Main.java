@@ -1,17 +1,26 @@
 // Press ⇧ twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
-    public static void main(String[] args) {
-        // Press ⌥⏎ with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        public static void main(String[] args)
+        {
+            String t1 = "Breakfast";
+            String t2 = "Breakfast";
+            String t4 = "Pig";
+            String t5 = "hey";
 
-        // Press ⌃R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+            String t3 = new String("hey");
 
-            // Press ⌃D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing ⌘F8.
-            System.out.println("i = " + i);
+     
+            System.out.printf("Brek == Brek? %s\n", t1 == t2?"true":"false");
+            System.out.printf("Brek == Peppa? %s\n", t2 == t4?"true":"false");
+            System.out.printf("Brek == hey? %s\n", t1 == t5?"true":"false");
+            System.out.printf("Pig == hey? %s\n", t4 == t5?"true":"false");
+            System.out.printf("hey == hey(new)? %s\n", t5 == t3?"true":"false");
+            
+        
+            System.out.println(t1.equals(t2));
+            System.out.println(t2.equals(t4));
+            System.out.println(t1.equals(t5));
+            System.out.println(t4.equals(t5));
         }
-    }
 }

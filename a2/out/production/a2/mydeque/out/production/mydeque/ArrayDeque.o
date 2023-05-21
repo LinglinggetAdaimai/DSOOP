@@ -1,0 +1,73 @@
+
+
+public class ArrayDeque <T> { 
+    //starts with aar of size 8
+    // for array size 16 or more your utilisation should always be at least 25%
+    //  You may add any private helper classes or methods in the same file as you see fit.
+
+    // TIP
+    /* to support the add and remove ops. in constant time. (independent w/ size)
+     *  try learn about circular buffer in 5.3, it has code example
+     * 
+     * dont do resizing yet, but you'll have to do it at the end
+     * 
+     * 4.3 discusses some idea(s) for resizing the underlying array
+     */
+
+    private T[] array;
+    private int size; //real size not capacity
+
+
+
+    // Creates an empty array deque.
+    public ArrayDeque() {
+        array = (T[]) new Object[8];
+        size = 0;
+    }
+
+    // Creates a deep copy of other.
+    public ArrayDeque(ArrayDeque<T> other) {
+
+        if (other.size() < this.size) {
+            other.grow(size);
+        }
+
+        System.arraycopy(array, 0,  other, 0, size);
+    }
+
+    public void grow(int n) {
+        T[] newArr = (T[]) new Object[size*2];
+        System.arraycopy(array, 0, newArr, 0, size);
+        
+        array = newArr;
+    }
+
+
+    // Adds an item of type T to the front of the deque.
+    public void addFirst(T item) {
+
+    }
+
+    // Adds an item of type T to the back of the deque.
+    public void addLast(T item)
+
+    // Returns true if deque is empty, false otherwise.
+    public boolean isEmpty()
+
+    // Returns the number of items in the deque.
+    public int size()
+
+    // Returns a string showing the items in the deque from first to last, // separated by a space.
+    public String toString()
+
+    // Removes and returns the item at the front of the deque. // If no such item exists, returns null.
+    public T removeFirst()
+
+    // Removes and returns the item at the back of the deque. // If no such item exists, returns null.
+    public T removeLast()
+
+    // Gets the item at the given index, where 0 is the front, 1 is the next item, // and so forth. If no such item exists, returns null. Must not alter the deque! 
+    public T get(int index)
+
+    public void printDeque()
+}

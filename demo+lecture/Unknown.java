@@ -14,22 +14,15 @@ import java.util.Arrays;
         public int getY() {return y;}
         public int getZ(int i) {return z[i];}
     
-    public static void main(String[] args) {
-        // SLList L = new SLList();
-        // L.addFirst(17);
-        // L.addFirst(3);
-        // int x = L.getFirst();
-        // System.out.println(x);
-        // int[] intnit = new int[5];
-        // {"h", "el", "l", "o,W", "orld!"};
-        // System.out.println(Arrays.toString(intnit));
-        // int[] a = new int[3]; a[0] = 1;
-        // a[1] = 3; System.out.println(a);
 
-        System.out.println(Unknown.w); // 0
-        System.out.println(Unknown.x); // 0
-        System.out.println(Unknown.y); // error
-        System.out.println(Arrays.toString(z)); // error
+        public static void update(String x){
+            x = "beans";
+        }
+        public static void main(String[] args) {
+        String x = "test";
+        update(x);
+        x = "uuuu";
+        System.out.println(x);
 
 
     }
