@@ -19,20 +19,20 @@
 
 public class Command
 {
-    private String commandWord;
-    private String secondWord;
+    private CommandWord commandWord;
+    private Direction directions;
 
     /**
      * Create a command object. First and second word must be supplied, but
      * either one (or both) can be null.
      * @param firstWord The first word of the command. Null if the command
      *                  was not recognised.
-     * @param secondWord The second word of the command.
+     * @param directions The second word of the command.
      */
-    public Command(String firstWord, String secondWord)
+    public Command(CommandWord firstWord, Direction directions)
     {
         commandWord = firstWord;
-        this.secondWord = secondWord;
+        this.directions = directions;
     }
 
     /**
@@ -40,7 +40,7 @@ public class Command
      * command was not understood, the result is null.
      * @return The command word.
      */
-    public String getCommandWord()
+    public CommandWord getCommandWord()
     {
         return commandWord;
     }
@@ -49,9 +49,9 @@ public class Command
      * @return The second word of this command. Returns null if there was no
      * second word.
      */
-    public String getSecondWord()
+    public Direction getSecondWord()
     {
-        return secondWord;
+        return directions;
     }
 
     /**
@@ -67,7 +67,7 @@ public class Command
      */
     public boolean hasSecondWord()
     {
-        return (secondWord != null);
+        return (directions != Direction.UNKNOWN);
     }
 }
 

@@ -19,6 +19,8 @@ import java.util.Scanner;
 public class Parser 
 {
     private CommandWords commands;  // holds all valid command words
+    private Directions directions; // holds all valid direction or second word
+
     private Scanner reader;         // source of command input
 
     /**
@@ -27,6 +29,7 @@ public class Parser
     public Parser() 
     {
         commands = new CommandWords();
+        directions = new Directions();
         reader = new Scanner(System.in);
     }
 
@@ -56,10 +59,19 @@ public class Parser
         // Now check whether this word is known. If so, create a command
         // with it. If not, create a "null" command (for unknown command).
         if(commands.isCommand(word1)) {
-            return new Command(word1, word2);
+            return new Command(commands.getCommandWord(word1), directions.getDirection(word2));
         }
         else {
-            return new Command(null, word2); 
+            return new Command(CommandWord.UNKNOWN, Direction.UNKNOWN);
         }
+
+//        if(commands.isCommand(word1)&& directions.isDirection(word2)) {
+//            command = commands.getCommandWord(word1);
+//            direction = directions.getDirection(word2);
+//        }
+//        else if (commands.isCommand(word1) && !directions.isDirection(word2)){
+//            command = commands.getCommandWord(word1);
+//        }
+//        return new Command(command,direction);
     }
 }
