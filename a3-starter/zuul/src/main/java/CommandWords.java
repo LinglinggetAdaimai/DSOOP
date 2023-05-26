@@ -27,6 +27,7 @@ public class CommandWords
         validCommand.put("help", CommandWord.HELP);
         validCommand.put("quit", CommandWord.QUIT);
         validCommand.put("look", CommandWord.LOOK);
+        validCommand.put("back", CommandWord.BACK);
 
     }
 
@@ -37,6 +38,7 @@ public class CommandWords
      */
     public boolean isCommand(String aString)
     {
+        aString = aString.toLowerCase();
         return validCommand.containsKey(aString);
     }
 
