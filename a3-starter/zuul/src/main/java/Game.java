@@ -42,7 +42,9 @@ public class Game
         allRoom = new Room[7];
 
         // create the rooms
-        Room Portkey = new Room("in the portkey room!, hold on tight!",true);
+        Room Portkey = new Room("in the portkey room!, hold on tight!");
+        Portkey.setToPortkey();
+
         allRoom[0] = new Room("in the Library");
         allRoom[1] = new Room("in the Defence Against the Dark Arts classroom");
         allRoom[2] = new Room("Potions classroom");
@@ -181,16 +183,16 @@ public class Game
         Room nextRoom = null;
         switch (direction){
             case NORTH:
-                nextRoom = currentRoom.roomDirection.get("north");
+                nextRoom = currentRoom.getRoom(Direction.NORTH);
                 break;
             case EAST:
-                nextRoom =  currentRoom.roomDirection.get("east");
+                nextRoom = currentRoom.getRoom(Direction.EAST);
                 break;
             case WEST:
-                nextRoom =  currentRoom.roomDirection.get("west");
+                nextRoom = currentRoom.getRoom(Direction.WEST);
                 break;
             case SOUTH:
-                nextRoom =  currentRoom.roomDirection.get("south");
+                nextRoom = currentRoom.getRoom(Direction.SOUTH);
                 break;
             case UNKNOWN:
                 break;
@@ -216,19 +218,8 @@ public class Game
         info.append(isPortkey());
         info.append("Exits: ");
         // get the possible directions that player can go
-        for (HashMap.Entry<String,Room> entry: currentRoom.roomDirection.entrySet()) {
-            String direction = entry.getKey();
-            switch (direction) {
-                case "north":
-                    info.append("north up ");
-                    break;
-                case "south":
-                    info.append("south down ");
-                    break;
-                default:
-                    info.append(direction + ' ');
-            }
-        }
+        info.append(currentRoom.getPossibleExits());
+
         return info.toString();
     }
 
@@ -245,6 +236,7 @@ public class Game
         }
         else { return true; }  // signal that we want to quit
     }
+
     /**
      * "Look" was entered
      *  print out - the room the user is at
@@ -272,12 +264,11 @@ public class Game
      * User has entered the portkey room
      * @return the room description that the user is teleported to
      */
-
     private String isPortkey(){
         if(currentRoom.portkey) {
-            int randomroomnum = (int) (Math.random() * allRoom.length - 1);
-            currentRoom = allRoom[randomroomnum];
-            return ".\n.\n.\nNow you are " + allRoom[randomroomnum].getDescription() + "!\n";
+            int randomRoomNum = (int) (Math.random() * allRoom.length - 1);
+            currentRoom = allRoom[randomRoomNum];
+            return ".\n.\n.\nNow you are " + allRoom[randomRoomNum].getDescription() + "!\n";
         }
         return "";
     }

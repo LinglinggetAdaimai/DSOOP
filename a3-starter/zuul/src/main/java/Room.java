@@ -16,8 +16,8 @@ import java.util.HashMap;
  */
 public class Room
 {
-    public String description;
-    public HashMap<String, Room> roomDirection;
+    private String description;
+    private HashMap<Direction, Room> roomDirection;
     public boolean portkey;
 
     /**
@@ -32,12 +32,9 @@ public class Room
         roomDirection = new HashMap<>();
     }
 
-    public Room(String description, boolean portkey)
+    public void setToPortkey()
     {
-        this.description = description;
-        roomDirection = new HashMap<>();
         this.portkey = true;
-
     }
 
     /**
@@ -47,15 +44,11 @@ public class Room
     public void setExits(String direction, Room neighbour) {
         Directions directions = new Directions();
         if (directions.isDirection(direction)) {
-            roomDirection.put(direction, neighbour);
+            roomDirection.put(directions.getDirection(direction), neighbour);
         }
         else {
             System.out.println("There is no such direction");
         }
-    }
-
-    public boolean hasDoor(String direction) {
-        return (roomDirection.get(direction)!= null);
     }
 
     /**
@@ -64,6 +57,33 @@ public class Room
     public String getDescription()
     {
         return description;
+    }
+
+    /**
+     * @param direction user want to go
+     * @return the room that is located at that direction
+     */
+    public Room getRoom(Direction direction){
+        return roomDirection.get(direction);
+    }
+
+    public String getPossibleExits() {
+
+        StringBuilder directionstr = new StringBuilder();
+        for (HashMap.Entry<Direction, Room> entry : this.roomDirection.entrySet()) {
+            Direction direction = entry.getKey();
+            switch (direction) {
+                case NORTH:
+                    directionstr.append("north up ");
+                    break;
+                case SOUTH:
+                    directionstr.append("south down ");
+                    break;
+                default:
+                    directionstr.append(direction.toString().toLowerCase() + ' ');
+            }
+        }
+        return directionstr.toString();
     }
 
 }
