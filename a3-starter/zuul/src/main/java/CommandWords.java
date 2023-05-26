@@ -32,7 +32,8 @@ public class CommandWords
     }
 
     /**
-     * Check whether a given String is a valid command word. 
+     * Check whether a given String is a valid command word.
+     * Can detect command word even if it's not in lowercase.
      * @return true if a given string is a valid command,
      * false if it isn't.
      */
@@ -42,12 +43,12 @@ public class CommandWords
         return validCommand.containsKey(aString);
     }
 
-    public CommandWord getCommandWord(String command) {
-        command = command.toLowerCase();
-        CommandWord commandWord = validCommand.get(command);
-        if (commandWord != null) {
+    public CommandWord getCommandWord(String aString) {
+        aString = aString.toLowerCase();
+        CommandWord commandWord = validCommand.get(aString);
+        if (commandWord != CommandWord.UNKNOWN) {
             return commandWord;
         }
-        else return CommandWord.UNKNOWN;
+        else { return CommandWord.UNKNOWN; }
     }
 }

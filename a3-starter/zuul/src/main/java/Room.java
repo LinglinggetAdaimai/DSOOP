@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 /**
  * Class Room - a room in an adventure game.
  *
@@ -12,13 +14,11 @@
  * @author  Michael Kölling and David J. Barnes
  * @version 2016.02.29
  */
-public class Room 
+public class Room
 {
     public String description;
-    public Room northExit;
-    public Room southExit;
-    public Room eastExit;
-    public Room westExit;
+    public HashMap<String, Room> roomDirection;
+    public boolean portkey;
 
     /**
      * Create a room described "description". Initially, it has
@@ -29,30 +29,33 @@ public class Room
     public Room(String description) 
     {
         this.description = description;
+        roomDirection = new HashMap<>();
+    }
+
+    public Room(String description, boolean portkey)
+    {
+        this.description = description;
+        roomDirection = new HashMap<>();
+        this.portkey = true;
+
     }
 
     /**
      * Define the exits of this room.  Every direction either leads
      * to another room or is null (no exit there).
-     * @param north The north exit.
-     * @param east The east east.
-     * @param south The south exit.
-     * @param west The west exit.
      */
-    public void setExits(Room north, Room east, Room south, Room west) 
-    {
-        if(north != null) {
-            northExit = north;
+    public void setExits(String direction, Room neighbour) {
+        Directions directions = new Directions();
+        if (directions.isDirection(direction)) {
+            roomDirection.put(direction, neighbour);
         }
-        if(east != null) {
-            eastExit = east;
+        else {
+            System.out.println("There is no such direction");
         }
-        if(south != null) {
-            southExit = south;
-        }
-        if(west != null) {
-            westExit = west;
-        }
+    }
+
+    public boolean hasDoor(String direction) {
+        return (roomDirection.get(direction)!= null);
     }
 
     /**

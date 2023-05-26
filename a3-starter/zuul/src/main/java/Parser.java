@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -20,7 +22,6 @@ public class Parser
 {
     private CommandWords commands;  // holds all valid command words
     private Directions directions; // holds all valid direction or second word
-
     private Scanner reader;         // source of command input
 
     /**
@@ -65,13 +66,12 @@ public class Parser
             return new Command(CommandWord.UNKNOWN, Direction.UNKNOWN);
         }
 
-//        if(commands.isCommand(word1)&& directions.isDirection(word2)) {
-//            command = commands.getCommandWord(word1);
-//            direction = directions.getDirection(word2);
-//        }
-//        else if (commands.isCommand(word1) && !directions.isDirection(word2)){
-//            command = commands.getCommandWord(word1);
-//        }
-//        return new Command(command,direction);
     }
-}
+    public String listOfCommand() {
+        StringBuilder list = new StringBuilder();
+        for (HashMap.Entry<String,CommandWord> cmd: commands.validCommand.entrySet()) {
+            list.append(cmd.getKey() + ' ');
+        }
+        return list.toString();
+        }
+    }
