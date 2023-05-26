@@ -42,7 +42,7 @@ public class Parser
         String word1 = null;
         String word2 = null;
 
-        System.out.print("> ");     // print prompt
+        System.out.print("\u001B[38;2;204;178;255m> \033[0m");     // print prompt
 
         inputLine = reader.nextLine();
 

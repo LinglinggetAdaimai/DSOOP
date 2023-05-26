@@ -103,11 +103,11 @@ public class Game
     private void printWelcome()
     {
         System.out.println();
-        System.out.println("Welcome to the World of Zuul!");
-        System.out.println("World of Zuul is a new, incredibly boring adventure game.");
-        System.out.println("Type 'help' if you need help.");
-        System.out.print("The commands you can use: ");
-        System.out.println(parser.listOfCommand());
+        System.out.println("\u001B[38;2;204;178;255mWelcome to the World of Zuul!");
+        System.out.println("World of Zuul is a new, incredibly boring adventure game.\033[0m");
+        System.out.println("\u001B[38;2;178;255;178mType\033[93m \u001B[38;5;46m'help'\u001B[92m \u001B[38;2;178;255;178mif you need help.");
+        System.out.print("The commands you can use: \033[0m");
+        System.out.printf("\u001B[38;5;46m %s\033[0m\n", parser.listOfCommand());
         System.out.println();
         System.out.println(getLocationInfo());
     }
@@ -122,7 +122,7 @@ public class Game
         boolean wantToQuit = false;
 
         if(command.isUnknown()) {
-            System.out.println("Sorry, I don't know what you mean...");
+            System.out.println("\u001B[38;2;204;178;255mSorry, I don't know what you mean...\033[0m");
             return false;
         }
 
@@ -157,11 +157,11 @@ public class Game
      */
     private void printHelp()
     {
-        System.out.println("You are lost. You are alone. You wander");
+        System.out.println("\u001B[38;5;183mYou are lost. You are alone. You wander");
         System.out.println("around at the university.");
         System.out.println();
-        System.out.println("Your command words are:");
-        System.out.println(parser.listOfCommand());
+        System.out.println("Your command words are:\033[0m");
+        System.out.printf("\u001B[38;2;178;255;178m%s\033[0m\n",parser.listOfCommand());
     }
 
     /**
@@ -173,7 +173,7 @@ public class Game
     {
         if(!command.hasSecondWord()) {
             // if there is no second word, we don't know where to go...
-            System.out.println("Go where?");
+            System.out.println("\u001B[38;2;255;204;153mGo where?\033[0m");
             return;
         }
 
@@ -199,7 +199,7 @@ public class Game
         }
 
         if (nextRoom == null) {
-            System.out.println("There is no door!");
+            System.out.println("\u001B[38;2;255;178;178mThere is no door!\033[0m");
         }
         else {
             lastRoom = currentRoom;
@@ -214,11 +214,12 @@ public class Game
     private String getLocationInfo() {
 
         StringBuilder info = new StringBuilder();
-        info.append("You are " + currentRoom.getDescription() + '\n');
+        info.append("\u001B[38;2;178;229;255mYou are " + currentRoom.getDescription() + "\n\033[0m");
         info.append(isPortkey());
-        info.append("Exits: ");
+        info.append("\u001B[38;2;178;229;255mExits: \u001B[38;2;255;255;178m");
         // get the possible directions that player can go
         info.append(currentRoom.getPossibleExits());
+        info.append("\033[0m");
 
         return info.toString();
     }
@@ -231,7 +232,7 @@ public class Game
     private boolean quit(Command command)
     {
         if(command.hasSecondWord()) {
-            System.out.println("Quit what?");
+            System.out.println("\u001B[38;2;255;204;153mQuit what?\033[0m");
             return false;
         }
         else { return true; }  // signal that we want to quit
@@ -256,7 +257,7 @@ public class Game
             currentRoom = lastRoom;
             lookAround();
         } else {
-            System.out.println("you've just arrived here!");
+            System.out.println("\u001B[38;2;255;204;153myou've just arrived here!\033[0m");
         }
     }
 
@@ -268,7 +269,7 @@ public class Game
         if(currentRoom.portkey) {
             int randomRoomNum = (int) (Math.random() * allRoom.length - 1);
             currentRoom = allRoom[randomRoomNum];
-            return ".\n.\n.\nNow you are " + allRoom[randomRoomNum].getDescription() + "!\n";
+            return "\u001B[96m.\n.\n.\nNow you are " + allRoom[randomRoomNum].getDescription() + "!\n\033[0m";
         }
         return "";
     }
