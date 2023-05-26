@@ -37,6 +37,7 @@ public class CommandWords
      */
     public boolean isCommand(String aString)
     {
+        aString = aString.toLowerCase();
         return validCommand.containsKey(aString);
     }
 

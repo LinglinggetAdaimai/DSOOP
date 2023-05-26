@@ -130,7 +130,7 @@ public class Game
         System.out.println("around at the university.");
         System.out.println();
         System.out.println("Your command words are:");
-        System.out.println("   go quit help");
+        System.out.println("   go quit help look");
     }
 
     /** 
@@ -161,6 +161,8 @@ public class Game
                 break;
             case SOUTH:
                 nextRoom = currentRoom.southExit;
+                break;
+            case UNKNOWN:
                 break;
         }
 
