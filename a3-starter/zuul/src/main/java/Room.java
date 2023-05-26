@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 /**
  * Class Room - a room in an adventure game.
  *
@@ -12,13 +14,11 @@
  * @author  Michael Kölling and David J. Barnes
  * @version 2016.02.29
  */
-public class Room 
+public class Room
 {
-    public String description;
-    public Room northExit;
-    public Room southExit;
-    public Room eastExit;
-    public Room westExit;
+    private String description;
+    private HashMap<Direction, Room> roomDirection;
+    public boolean portkey;
 
     /**
      * Create a room described "description". Initially, it has
@@ -29,29 +29,25 @@ public class Room
     public Room(String description) 
     {
         this.description = description;
+        roomDirection = new HashMap<>();
+    }
+
+    public void setToPortkey()
+    {
+        this.portkey = true;
     }
 
     /**
      * Define the exits of this room.  Every direction either leads
      * to another room or is null (no exit there).
-     * @param north The north exit.
-     * @param east The east east.
-     * @param south The south exit.
-     * @param west The west exit.
      */
-    public void setExits(Room north, Room east, Room south, Room west) 
-    {
-        if(north != null) {
-            northExit = north;
+    public void setExits(String direction, Room neighbour) {
+        Directions directions = new Directions();
+        if (directions.isDirection(direction)) {
+            roomDirection.put(directions.getDirection(direction), neighbour);
         }
-        if(east != null) {
-            eastExit = east;
-        }
-        if(south != null) {
-            southExit = south;
-        }
-        if(west != null) {
-            westExit = west;
+        else {
+            System.out.println("There is no such direction");
         }
     }
 
@@ -61,6 +57,33 @@ public class Room
     public String getDescription()
     {
         return description;
+    }
+
+    /**
+     * @param direction user want to go
+     * @return the room that is located at that direction
+     */
+    public Room getRoom(Direction direction){
+        return roomDirection.get(direction);
+    }
+
+    public String getPossibleExits() {
+
+        StringBuilder directionstr = new StringBuilder();
+        for (HashMap.Entry<Direction, Room> entry : this.roomDirection.entrySet()) {
+            Direction direction = entry.getKey();
+            switch (direction) {
+                case NORTH:
+                    directionstr.append("north up ");
+                    break;
+                case SOUTH:
+                    directionstr.append("south down ");
+                    break;
+                default:
+                    directionstr.append(direction.toString().toLowerCase() + ' ');
+            }
+        }
+        return directionstr.toString();
     }
 
 }
