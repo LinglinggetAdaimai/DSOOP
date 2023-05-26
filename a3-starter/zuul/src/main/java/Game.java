@@ -98,17 +98,22 @@ public class Game
             return false;
         }
 
-        String commandWord = command.getCommandWord();
-        if (commandWord.equals("help")) {
-            printHelp();
-        }
-        else if (commandWord.equals("go")) {
-            goRoom(command);
-        }
-        else if (commandWord.equals("quit")) {
-            wantToQuit = quit(command);
-        }
+        CommandWord commandWord = command.getCommandWord();
 
+        switch (commandWord) {
+            case HELP:
+                printHelp();
+                break;
+            case GO:
+                goRoom(command);
+                break;
+            case LOOK:
+                lookAround();
+                break;
+            case QUIT:
+                wantToQuit = quit(command);
+                break;
+        }
         return wantToQuit;
     }
 
@@ -140,23 +145,26 @@ public class Game
             return;
         }
 
-        String direction = command.getSecondWord();
+        Direction direction = command.getSecondWord();
 
         // Try to leave current room.
         Room nextRoom = null;
-        if(direction.equals("north")) {
-            nextRoom = currentRoom.northExit;
-        }
-        if(direction.equals("east")) {
-            nextRoom = currentRoom.eastExit;
-        }
-        if(direction.equals("south")) {
-            nextRoom = currentRoom.southExit;
-        }
-        if(direction.equals("west")) {
-            nextRoom = currentRoom.westExit;
+        switch (direction){
+            case NORTH:
+                nextRoom = currentRoom.northExit;
+                break;
+            case EAST:
+                nextRoom = currentRoom.eastExit;
+                break;
+            case WEST:
+                nextRoom = currentRoom.westExit;
+                break;
+            case SOUTH:
+                nextRoom = currentRoom.southExit;
+                break;
         }
 
+// ----------------------------------------------
         if (nextRoom == null) {
             System.out.println("There is no door!");
         }
@@ -176,15 +184,15 @@ public class Game
         StringBuilder info = new StringBuilder();
         info.append("You are " + currentRoom.getDescription());
         info.append('\n');
-        System.out.print("Exits: ");
+        info.append("Exits: ");
         if(currentRoom.northExit != null) {
-            info.append("north ");
+            info.append("north up ");
         }
         if(currentRoom.eastExit != null) {
             info.append("east ");
         }
         if(currentRoom.southExit != null) {
-            info.append("south ");
+            info.append("south down ");
         }
         if(currentRoom.westExit != null) {
             info.append("west ");
@@ -207,5 +215,9 @@ public class Game
         else {
             return true;  // signal that we want to quit
         }
+    }
+
+    private void lookAround(){
+        System.out.println(getLocationInfo());
     }
 }
