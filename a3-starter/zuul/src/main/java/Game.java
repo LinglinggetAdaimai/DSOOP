@@ -19,6 +19,7 @@ public class Game
 {
     private Parser parser;
     private Room currentRoom;
+    private Room lastRoom;
         
     /**
      * Create the game and initialise its internal map.
@@ -113,6 +114,9 @@ public class Game
             case QUIT:
                 wantToQuit = quit(command);
                 break;
+            case BACK:
+                goBack();
+                break;
         }
         return wantToQuit;
     }
@@ -171,6 +175,7 @@ public class Game
             System.out.println("There is no door!");
         }
         else {
+            lastRoom = currentRoom;
             currentRoom = nextRoom;
             System.out.println(getLocationInfo());
 
@@ -221,5 +226,10 @@ public class Game
 
     private void lookAround(){
         System.out.println(getLocationInfo());
+    }
+
+    private void goBack(){
+        currentRoom = lastRoom;
+        lookAround();
     }
 }
