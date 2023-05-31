@@ -73,7 +73,7 @@ public class MyPriorityQueue<T> implements IPriorityQueue<T> {
         @Override
         public boolean hasNext() {
             if (IsReverse()) {
-                return index > 0;
+                return index > -1;
             }
             return index < size;
         }
