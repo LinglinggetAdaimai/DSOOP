@@ -29,6 +29,7 @@ public class MaxDemo {
     // use the default comparator design (ex2)
     // it should be like
     // static <T extends ...> T maxValue(T[] items)
+
     static <T extends HasIsLargerThan<T>> T maxValue(T[] items){
         if (items.length == 0) {return null;}
         T biggest = items[0];
@@ -40,12 +41,5 @@ public class MaxDemo {
         return biggest;
     }
 
-    public static void main(String[] args) {
-        Cat[] friends = {
-                new Cat("Cat 1", 10),
-                new Cat("Cat 2", 5)
-        };
-        System.out.println(maxValue(friends, Lecture7::largerByWeight));
-//        int maxDex = maxValue(friends, (Cat x, Cat y) -> x.w > y.w);
-    }
+
 }

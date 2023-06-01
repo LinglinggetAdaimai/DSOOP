@@ -25,10 +25,19 @@
 //}
 
 import java.util.function.BiFunction;
-class Cat {
+class Cat implements HasIsLargerThan{
     String name;
     int w;
     Cat(String name, int w) { this.name = name; this.w = w;}
+
+    @Override
+    public boolean isLargerThan(Object that) {
+        if (that.getClass() == this.getClass()){
+            Cat thatcat = (Cat) that;
+            return thatcat.w < this.w;
+        }
+        return false;
+    }
 }
 public class Lecture7 {
 //    public static void main(String[] args) {
@@ -42,11 +51,13 @@ public class Lecture7 {
 //    }
 
     static boolean largerByWeight(Cat x, Cat y) {
+//        if (x.w > y.w) return
         return x.w > y.w;
     }
 
+
 //    static <T> int maxIndex(T[] items,
-//                            BiFunction<T, T, Boolean> isLarger) {
+//                            BiFunction<T, T, T> isLarger) {
 //        if (items.length == 0) return -1;
 //        int maxDex = 0; // current max index
 //        for (int index = 0; index < items.length; index++) {

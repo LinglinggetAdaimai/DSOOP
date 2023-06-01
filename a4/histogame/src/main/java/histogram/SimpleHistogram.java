@@ -2,62 +2,97 @@
 
 package histogram;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Iterator;
 
 public class SimpleHistogram<DT> implements Histogram<DT>, Iterable<DT> {
 
+    private HashMap<DT, Integer> domain;
 
     // constructs an empty histogram (with no information)
-    public SimpleHistogram() {}
+    public SimpleHistogram() {
+        domain = new HashMap<>();
+    }
 
     // constructs a histogram from a list of items given by the parameter items
-    public SimpleHistogram(DT items[]) {}
+    public SimpleHistogram(DT items[]) {
+        domain= new HashMap<>();
+        for (DT element : items) {
+            if (domain.containsKey(element)) {
+                setCount(element, (getCount(element)+1));
+            }
+            else setCount(element, 1);
+        }
+    }
 
     // constructs a (new) histogram from an existing histogram, sharing nothing internally
-    public SimpleHistogram(Histogram<DT> hist) {}
+    public SimpleHistogram(Histogram<DT> hist) {
+       HashMap<DT, Integer> another_hist = new HashMap<>();
+    }
+
+    public boolean IsExist(DT item){
+        return domain.containsKey(item);
+    }
 
     public String toString() {
-        return null;
+
+    }
+
+    @Override
+    public boolean equals(Object obj) { // TODO
+
     }
 
     // check if the elements are the same
-    public boolean equals(Object o) {
-        if (o == null || this.getClass() != o.getClass()) return false;
-        if (o == this) return true;
 
-        MyArrayList other = (MyArrayList) o;
 
-        if(size != other.size()){
-            return false;
-        }
-        for(int i = 0; i < size; i++){
-            if(items[i] != other.items[i]){
-                return false;
-            }
-        }
-        return true;
-
-    }
-
-    // Histogram Implementations
+    // Returns the total frequency count of all items in the domain combined.
     @Override
     public int getTotalCount() {
-        return 0;
+        int total = 0;
+        for (Map.Entry<DT, Integer> pair : domain.entrySet()) {
+            total += pair.getValue();
+        }
+        return total;
     }
 
+    /** Returns the frequency count of a given domain item.
+     * If invalid domainitem is given, return 0.
+     * @param item: element that we want the occurrence
+    */
     @Override
     public int getCount(DT item) {
-        return 0;
+        int count = IsExist(item)? domain.get(item) : 0;
+        return count;
     }
 
+    /** Sets the frequecy count of a given domain item. If the domain item
+     * doesn't yet exist in the domain, this will also add it to the domain.
+     * @param item: element that we want the occurrence
+     * @param count: numbers of occurrence
+     */
     @Override
-    public void setCount(DT item, int count) {
+    public void setCount(DT item, int count) {domain.put(item, count);}
 
+    class SimpleHistogramIter implements Iterator<DT> {
+
+        private int index;
+
+        @Override
+        public boolean hasNext() {
+            return index < domain.size();
+        }
+
+        @Override
+        public DT next() {
+            return (DT)domain.keySet().toArray()[index++];
+        }
     }
 
     @Override
     public Iterator<DT> iterator() {
-        return null;
+        return domain.keySet().iterator();
     }
 }
 
