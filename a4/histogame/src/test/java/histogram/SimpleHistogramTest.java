@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.Iterator;
 
-
-/* TODO: Uncomment me when you're done implementing the class
 public class SimpleHistogramTest {
 
     @Test
@@ -25,5 +23,21 @@ public class SimpleHistogramTest {
         assertEquals(1, h.getCount('c'));
         assertEquals(4, h.getTotalCount());
     }
+
+    @Test
+    public void testHistogrambyme() {
+        Integer[] nums = {1, 4, 5, 4, 3, 1, 2, 3, 3, 2};
+        Histogram<Integer> hist = new SimpleHistogram<>(nums);
+
+        assertEquals(hist.getCount(3),3);
+        assertEquals(hist.getCount(1),2);
+        assertEquals(hist.getCount(2),2);
+        assertEquals(hist.getCount(4),2);
+        assertEquals(hist.getCount(16),0);
+
+        hist.setCount(9,18);
+        assertEquals(hist.getCount(9),18);
+
+    }
 }
- */
+

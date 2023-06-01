@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="51711c07-f4ff-4bdb-a8eb-7685cb0dfe77" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../SetnHashSet/SetnHashSet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a1/Diamond.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a1/Fib.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a1/Happy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a1/Hidden.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a1/Roman.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a1/Roman2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a1/Subsel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a2/out/production/a2/mydeque/ArrayDeque.class" beforeDir="false" afterPath="$PROJECT_DIR$/../a2/out/production/a2/mydeque/ArrayDeque.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a2/out/production/a2/mydeque/ArrayDequeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a2/out/production/a2/mydeque/LinkedListDeque.class" beforeDir="false" afterPath="$PROJECT_DIR$/../a2/out/production/a2/mydeque/LinkedListDeque.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a2/out/production/a2/mydeque/LinkedListDequeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a2/out/production/a2/mydeque/mydeque.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a2/out/production/a2/mydeque/out/production/mydeque/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a2/out/production/a2/mydeque/out/production/mydeque/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a2/out/production/a2/mydeque/out/production/mydeque/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a2/out/production/a2/mydeque/out/production/mydeque/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a2/out/production/a2/mydeque/out/production/mydeque/ArrayDeque.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a2/out/production/a2/mydeque/out/production/mydeque/mydeque.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/histogame/.gradle/7.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/histogame/.gradle/7.6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/histogame/.gradle/7.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/histogame/.gradle/7.6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/histogame/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/histogame/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/histogame/src/main/java/histogram/SimpleHistogram.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/histogame/src/main/java/histogram/SimpleHistogram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/histogame/src/test/java/histogram/SimpleHistogramTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/histogame/src/test/java/histogram/SimpleHistogramTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2QasKgyskc5RN4WWbBq45IVoQNf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "fixing",
+    "last_opened_file_path": "/Users/lingling/Desktop/CS Degree/Coding/DSOOP/m1-starter/build.gradle"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="51711c07-f4ff-4bdb-a8eb-7685cb0dfe77" name="Changes" comment="" />
+      <created>1685602964410</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685602964410</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/TripleVowels.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
