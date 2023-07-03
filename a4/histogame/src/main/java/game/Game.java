@@ -3,7 +3,6 @@ package game;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-
 public class Game {
 
     private long start; // keep track of time
@@ -141,3 +140,5 @@ public class Game {
     public void userWin(){ System.out.println("\u001B[38;2;204;255;178m\nYou've solved every words. Well done!\033[0m");}
 
 }
+
+

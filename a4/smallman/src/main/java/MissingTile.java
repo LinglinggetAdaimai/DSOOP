@@ -3,7 +3,6 @@ public class MissingTile {
       setTileHelper(0,0,board.size(), board.getPaintedCellX(), board.getPaintedCellY(), board);
   }
 
-
   public static void setTileHelper(int startX, int startY, int subGridsize, int paintedX, int paintedY, Grid ori_grid){
     if (subGridsize == 2) {
       switch (getDirection(paintedX, paintedY, subGridsize)) { // checked and fins with size 2
@@ -74,10 +73,10 @@ public class MissingTile {
 
   public static int getDirection(int paintedX, int paintedY, int size){
     int sizeDtwo = size/2;
+    if (paintedX >= sizeDtwo && paintedY < sizeDtwo) return 0; // NorthEast
     if (paintedX >= sizeDtwo && paintedY >= sizeDtwo) return 1; // SouthEast
-    if (paintedX >= sizeDtwo && paintedY < sizeDtwo) return 0;
-    if (paintedX < sizeDtwo && paintedY < sizeDtwo) return 3;
-    if (paintedX < sizeDtwo && paintedY >= sizeDtwo) return 2;
+    if (paintedX < sizeDtwo && paintedY >= sizeDtwo) return 2; // SouthEast
+    if (paintedX < sizeDtwo && paintedY < sizeDtwo) return 3; // NorthWest
 
     return 0;
   }

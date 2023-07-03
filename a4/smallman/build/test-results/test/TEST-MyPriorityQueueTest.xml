@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MyPriorityQueueTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-08T11:13:24" hostname="eh.local" time="0.031">
+<testsuite name="MyPriorityQueueTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-12T16:36:15" hostname="eh.local" time="0.018">
   <properties/>
-  <testcase name="testSimpleCases()" classname="MyPriorityQueueTest" time="0.031"/>
+  <testcase name="testSimpleCases()" classname="MyPriorityQueueTest" time="0.018"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

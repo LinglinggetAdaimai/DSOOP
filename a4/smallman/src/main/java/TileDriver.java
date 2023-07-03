@@ -9,7 +9,7 @@ public class TileDriver {
 
 	public static void main(String[] args) {
 		// change this if you want to try something else
-		if (testTiling(1024, 5, 2))
+		if (testTiling(8, 5, 2))
 			System.out.println("Tiling seems OK!");
 		else
 			System.out.println("Tiling is broken.");

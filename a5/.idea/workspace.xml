@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="62dc7e3d-dd4d-4afb-b652-69f6c4c7dceb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Lecture14/src/Lecture14.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lecture15/src/HW5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lecture15/src/Lecture15.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lecture17/src/MyPriorityQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lecture19/src/MyTreeMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a4/histogame/build/classes/java/main/game/Command.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a4/histogame/build/classes/java/main/game/CommandWords.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a4/histogame/build/classes/java/main/game/Formable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a4/histogame/build/classes/java/main/game/Game$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a4/histogame/build/classes/java/main/game/Game.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a4/histogame/build/classes/java/main/game/Games.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a4/histogame/build/classes/java/main/game/IDatabase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a4/histogame/build/classes/java/main/game/Parser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a4/histogame/build/classes/java/main/game/TextTwist.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a4/histogame/build/classes/java/main/game/Word.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a4/histogame/build/classes/java/main/game/WordDatabase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a4/histogame/build/classes/java/main/histogram/Histogram.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a4/histogame/build/classes/java/main/histogram/SimpleHistogram.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a4/histogame/build/resources/main/linuxwords.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a4/histogame/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hackerRank/hackerRank/src/FullcountSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hackerRank/hackerRank/src/Results.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lecture14/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture14/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lecture14/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lecture14/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lecture14/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture14/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lecture14/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lecture14/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lecture14/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lecture14/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lecture14/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lecture14/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lecture14/src/main/java/Lecture14.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/histogame/.gradle/7.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/histogame/.gradle/7.6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/histogame/.gradle/7.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/histogame/.gradle/7.6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/histogame/.gradle/7.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/histogame/.gradle/7.6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/histogame/.gradle/7.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/histogame/.gradle/7.6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/histogame/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/histogame/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/histogame/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/histogame/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/histogame/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/histogame/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/histogame/src/main/java/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/histogame/src/main/java/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/.gradle/7.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/.gradle/7.6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/.gradle/7.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/.gradle/7.6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/.gradle/7.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/.gradle/7.6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/.gradle/7.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/.gradle/7.6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/classes/java/main/Midway.class" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/build/classes/java/main/Midway.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/classes/java/main/MissingTile.class" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/build/classes/java/main/MissingTile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/classes/java/main/TileDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/build/classes/java/main/TileDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/distributions/smallman.tar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/distributions/smallman.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/libs/smallman.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/reports/tests/test/classes/MyPriorityQueueTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/build/reports/tests/test/classes/MyPriorityQueueTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/build/reports/tests/test/packages/default-package.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/scripts/smallman" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/scripts/smallman.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/test-results/test/TEST-MyPriorityQueueTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/build/test-results/test/TEST-MyPriorityQueueTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/tmp/compileJava/compileTransaction/stash-dir/MissingTile.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/tmp/compileJava/compileTransaction/stash-dir/TileDriver.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/build/tmp/compileJava/compileTransaction/stash-dir/TileDriver.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/tmp/compileTestJava/compileTransaction/stash-dir/MyPriorityQueueTest$1.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/tmp/compileTestJava/compileTransaction/stash-dir/MyPriorityQueueTest.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/src/main/java/Midway.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/src/main/java/Midway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/src/main/java/MissingTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/src/main/java/MissingTile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a4/smallman/src/main/java/TileDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../a4/smallman/src/main/java/TileDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m1handin/.gradle/7.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../m1handin/.gradle/7.6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m1handin/.gradle/7.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../m1handin/.gradle/7.6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m1handin/.gradle/7.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../m1handin/.gradle/7.6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m1handin/.gradle/7.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../m1handin/.gradle/7.6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m1handin/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../m1handin/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m1handin/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../m1handin/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m1handin/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../m1handin/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m1handin/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../m1handin/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m1handin/build/classes/java/main/PusheenWalker.class" beforeDir="false" afterPath="$PROJECT_DIR$/../m1handin/build/classes/java/main/PusheenWalker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m1handin/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../m1handin/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2RetMw8AxXfHM0hkKiTRncUbkw0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "fixing",
+    "onboarding.tips.debug.path": "/Users/lingling/Desktop/CS Degree/Coding/DSOOP/a5/src/Main.java"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="62dc7e3d-dd4d-4afb-b652-69f6c4c7dceb" name="Changes" comment="" />
+      <created>1687622338124</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687622338124</updated>
+    </task>
+    <servers />
+  </component>
+</project>
