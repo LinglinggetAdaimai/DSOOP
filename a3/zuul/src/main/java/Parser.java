@@ -41,8 +41,9 @@ public class Parser
         String inputLine;   // will hold the full input line
         String word1 = null;
         String word2 = null;
+       /* System.out.println(System.nanoTime());*/
 
-        System.out.print("\u001B[38;2;204;178;255m> \033[0m");     // print prompt
+        System.out.print("\u001B[38;2;204;178;255m> \033[0m");     // print prompt ">"
 
         inputLine = reader.nextLine();
 

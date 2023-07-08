@@ -7,7 +7,6 @@ public class MyPriorityQueue<T> implements IPriorityQueue<T> {
     CompareWith <T> comparefunc;
     private int size;
 
-//    int divide = size();
 
     public MyPriorityQueue(CompareWith<T> cc) {
         queueItems = new ArrayList<>();

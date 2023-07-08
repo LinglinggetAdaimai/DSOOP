@@ -22,6 +22,8 @@ public class SimpleHistogramTest {
         assertEquals(1, h.getCount('b'));
         assertEquals(1, h.getCount('c'));
         assertEquals(4, h.getTotalCount());
+
+        System.out.println(h.toString());
     }
 
     @Test
