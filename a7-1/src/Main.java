@@ -99,7 +99,7 @@ public class Main {
      * ConcatType main
      */
     public static void main(String[] args) {
-    MakeTree makeTree = new MakeTree();
+//    MakeTree makeTree = new MakeTree();
 //    int[] k1 = new int[] {1,2,3,4,5,6,7,8};
 ////    int[] k1 = new int[] {1,2,3};
 //    BinaryTreeNode treek1 = makeTree.buildBST(k1);
@@ -164,24 +164,24 @@ public class Main {
 //        System.out.print( "Postorder: ");
 //        System.out.println("1,2,4,3,6,8,7,5");
 
-//        LinkedList<Integer> poo = new LinkedList<>(of(1,3,2,9,6));
-//        LinkedList<Integer> inor = new LinkedList<>(of(1,2,3,6,9));
+        LinkedList<Integer> poo = new LinkedList<>(of( 4,5,2,1,9,12,7 ));
+        LinkedList<Integer> inor = new LinkedList<>(of( 4,5,2,1,7,12,9));
+
+        BinaryTreeNode preoNinor = Decor.mkTree(poo,inor);
 //
-//        BinaryTreeNode preoNinor = Decor.mkTree(poo,inor);
-//
-//
-//        System.out.print("Postorder: ");
-//        System.out.println(Helpers.Debug.display(preoNinor, Helpers.Debug.TreeOrder.POSTORDER));
-//
-//        System.out.print( "Postorder: ");
-//        System.out.println("1,3,2,9,6");
-//        System.out.print("Inorder:");
-//       System.out.println(Helpers.Debug.display(preoNinor, Helpers.Debug.TreeOrder.INORDER));
-//        System.out.print("Inorder:");
-//        System.out.println("1,2,3,6,9");
-        int[] keys = {1, 2, 3, 4, 5};
-        BinaryTreeNode bst = MakeTree.buildBST(keys);
-        System.out.println("DEBUG:");
-        System.out.println(Helpers.Debug.display(bst, Helpers.Debug.TreeOrder.INORDER));
+
+        System.out.print("Postorder: ");
+        System.out.println(Helpers.Debug.display(preoNinor, Helpers.Debug.TreeOrder.POSTORDER));
+
+        System.out.print( "Postorder: ");
+        System.out.println("4 5 2 1 9 12 7 ");
+        System.out.print("Inorder:");
+       System.out.println(Helpers.Debug.display(preoNinor, Helpers.Debug.TreeOrder.INORDER));
+        System.out.print("Inorder:");
+        System.out.println("4 5 3 2 7 12 9");
+//        int[] keys = {1, 2, 3, 4, 5};
+//        BinaryTreeNode bst = MakeTree.buildBST(keys);
+//        System.out.println("DEBUG:");
+//        System.out.println(Helpers.Debug.display(bst, Helpers.Debug.TreeOrder.INORDER));
     }
 }
